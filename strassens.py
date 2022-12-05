@@ -19,8 +19,6 @@ def strassen(X, Y):
     # base case
     if len(X) == 1 or len(Y) == 1:
         return X * Y
-
-    # padding rows and cols of zero if size of nxn matrices is odd
     # https://cs.stackexchange.com/questions/97998/strassens-matrix-multiplication-algorithm-when-n-is-not-a-power-of-2
     if X.size % 2 != 0:
         X = padding(X)
